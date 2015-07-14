@@ -4,9 +4,23 @@ DPBaseAdapter-Android demo中学习BaseAdapter的使用,应用到ListView和Grid
 **【感谢慕课网的 [Android必学-BaseAdapter的使用与优化](http://www.imooc.com/learn/365) 视频教程】**<br/>
 **【[bingoogolapple-BGAAdapter-Android](https://github.com/bingoogolapple/BGAAdapter-Android)】**<br/>
     可以查看之前的[Android-BaseAdapter-study01](https://github.com/whiskeyfei/Android-BaseAdapter-study01/blob/Android-BaseAdapter-study02/README.md)使用,介绍了adapter的基本使用
+    
+#### 7.14更新内容
 
-### 效果图
-  稍后补充
+* 单数获取数据单例类：DPFakeData，DPItemModel实现序列化
+* 添加自定义Application，初始化base context(在程序的任何地方都可以获得)
+* 添加工具类：AssetsUtils、ListUtils、StringUtils
+
+#### 详细说明
+
+1、AssetsUtils：从assets或者raw文件夹中获取文件并读取数据，并转化model<br/>
+2、ListUtils：目前只有isEmpty和getCount方法，以后丰富<br/>
+3、StringUtils：目前只有isEmpty和isMailAddress，以后丰富<br/>
+
+
+#### 效果图
+ <img src="https://github.com/whiskeyfei/DPBaseAdapter-Android/blob/master/res/drawable/device_gridview.png" width = "380" height = "676" alt="图片名称" align=center />
+  <img src="https://github.com/whiskeyfei/DPBaseAdapter-Android/blob/master/res/drawable/device_listview.png" width = "380" height = "676" alt="图片名称" align=center />
   
 ### 使用方法
   1、目前在Activity当中使用，实现DPOnItemChildClickListener和DPOnItemChildLongClickListener接口<br/>
@@ -88,6 +102,7 @@ DPBaseAdapter-Android demo中学习BaseAdapter的使用,应用到ListView和Grid
   ```
 
 ## 下一步任务
+* 本地json数据（7.14完成）
 * 使用线上的数据，异步任务访问，添加loadding圈
 * 使用RecyclerView来实现ListView和GridView
 * 使用Fragment替换activity
