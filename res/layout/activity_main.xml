@@ -15,11 +15,19 @@
         android:layout_marginBottom="5dp"/>
     
     <Button
+        android:id="@+id/listview_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ListView_Json"
+        android:textSize="18sp" 
+        android:layout_below="@+id/listview_btn"/>
+    
+    <Button
         android:id="@+id/gridview_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="GridView"
         android:textSize="18sp" 
-        android:layout_below="@+id/listview_btn"/>
+        android:layout_below="@+id/listview_data_btn"/>
 
 </RelativeLayout>

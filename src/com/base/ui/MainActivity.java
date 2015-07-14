@@ -11,7 +11,7 @@ import com.base.adapter.R;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
-	private Button mButtonListView,mButtonGridView;
+	private Button mButtonListView,mButtonGridView,mButtonJson;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,10 @@ public class MainActivity extends Activity implements OnClickListener{
 	private void initView() {
 		mButtonListView = (Button)findViewById(R.id.listview_btn);
 		mButtonGridView = (Button)findViewById(R.id.gridview_btn);
+		mButtonJson = (Button)findViewById(R.id.listview_data_btn);
 		mButtonListView.setOnClickListener(this);
 		mButtonGridView.setOnClickListener(this);
+		mButtonJson.setOnClickListener(this);
 	}
 
 	@Override
@@ -35,6 +37,10 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.gridview_btn:
 			start(GridViewDemoPage.class);
+			break;
+			
+		case R.id.listview_data_btn:
+			start(ListViewJsonPage.class);
 			break;
 
 		}

@@ -34,7 +34,12 @@ public class ListViewDemoPage extends Activity implements AdapterView.OnItemClic
 
 	private void initData() {
 		for (int i = 0; i < 30; i++) {
-			mDataList.add(new DPItemModel(R.drawable.ic_launcher, "title" + i,"content" + i, IMAGEURL));
+			DPItemModel model = new DPItemModel();
+			model.setItemResId(R.drawable.ic_launcher);
+			model.setItemTitle("title" + i);
+			model.setItemContent("content" + i);
+			model.setItemIconUrl(IMAGEURL);
+			mDataList.add(model);
 		}
 	}
 
